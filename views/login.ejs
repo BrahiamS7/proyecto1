@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <div class="formContainer">
+        <form action="/login" method="post">
+            <input type="text" name="id" id="inputForm" required>
+            <input type="password" name="pass" id="inputForm" required>
+            <input type="submit" value="Sign in">
+        </form>
+        <h3>¿Don't have an account? <a href="/register">Register Now!</a></h3>
+    </div>
+    <% if ((locals.msg)) { %>
+        <h3 class="loginMsg"><%= msg %></h3>
+    <% } %>
+</body>
+</html>
