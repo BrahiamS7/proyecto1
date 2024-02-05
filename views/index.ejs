@@ -1,23 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-    <link rel="stylesheet" href="/styles/main.css">
-</head>
-<body>
-    <h1>Hi</h1>
-    <a href="/crear">Crear un nuevo post</a>
-    <div class="postContainer">
-        <ul>
-            <% post.forEach((posts)=> {%>
-            <li>
-                <a href="views/<%= posts.title %>"><%= posts.title %></a>
-            </li>
-            <% })%>
-        </ul>
-      
+<%- include("partials/header.ejs") %>
+
+    <div class="mainPosts">
+        <div class="postContainer">
+            <ul>
+                <% post.forEach((posts)=> {%>
+                    <li class="boxBox">
+                        <h3 class="h3Post"> <%= posts.title %></h3>
+                        <p class="pPost"> <%= posts.content %> </p>
+                    </li>
+                    <% })%>
+            </ul>
+        </div>
     </div>
-</body>
-</html>
+
+<%- include("partials/footer.ejs") %>

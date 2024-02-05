@@ -4,4 +4,181 @@
     padding: 0;
     font-family: sans-serif;
 }
+main{
+    background-color: #D9D4D2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+.formContainer{
+    background-color: white;
+    width: 70%;
+    height: 600px;
+    position: relative;
+    top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.formItemsContainer{
+    width: 95%;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.loginForm{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.inputForm{
+    width: 100%;
+    height: 30px;
+    margin: 20px 0;
+    border: none;
+    border-bottom: 2px solid #D9D4D2;
+    padding: 0 10px;
+}
+.inputForm:focus{
+    outline: none;
 
+}
+.box1 label, .box2 label, .box3 label{
+    position: relative;
+    top: 20px;
+}
+.h3Login{
+    font-size: 15px;
+    position: relative;
+    right: 380px;
+}
+.btnLogin{
+    width: 120px;
+    height: 35px;
+    border-radius: 10px;
+    border: 2px solid #262626;
+    background-color: #262626;
+    color: #F2F2F2;
+    font-size: 16px;
+}
+.h1Login{
+    position: relative;
+    top: 100px;
+}
+.loginMsg{
+    font-size: 15px;
+    color: #81858C;
+}
+/* HEADER */
+header{
+    background-color: #ffffff;
+    width: 100%;
+    height: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    position: relative;
+    right: 45%;
+}
+.btnCrear{
+    width: 100px;
+    height: 30px;
+    margin-left: 20px;
+    border: 2px solid #262626;
+    background-color: white;
+    color: #262626;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: all .3s ease-in-out;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.btnCrear:hover{
+    background-color: #F2F2F2;
+
+}
+.btnCrear a {
+    text-decoration: none;
+    color: #262626;
+    width: 100%;
+    height: 100%;
+}
+/* FOOTER */
+footer{
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+    top: 10px;
+    color: #81858C;
+    height: 40px;
+    margin-top: 10px;
+}
+
+/* BLOGS ZONE */
+.mainPosts{
+    background-color: #D9D4D2;
+    width: 100%;
+    height: 100%;
+}
+.boxImages{
+    width: 100px;
+    height: 100px;
+}
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.boxBox{
+    margin: 30px 20px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    list-style: none;
+    width: 80%;
+    height: 150px;
+    padding: 20px;
+}
+/* CREAR PAGE */
+.mainCrear{
+    width: 100%;
+    height: 85vh;
+    background-color: #D9D4D2;
+    padding: 40px;
+}
+.boxForm{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.formCrear{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.inputCrear, .textareaCrear{
+    width: 450px;
+    margin: 20px 0;
+}
+.textareaCrear{
+    resize: none;
+    padding: 10px;
+}
+.inputCrear{
+    height: 30px;
+    padding: 10px;
+}

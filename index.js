@@ -7,6 +7,7 @@ const port=3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"))
+app.use('/images', express.static('images'));
 
 const accounts=[]
 const posts=[]
@@ -23,12 +24,8 @@ app.post("/login",(req,res)=>{
         accounts.forEach((user)=>{
             id=user.id
             pass=user.pass
-            console.log(accounts)
             if((id===req.body.id) && (pass===req.body.pass)){
-                res.render("index.ejs",{
-                    msg:"",
-                    post:posts
-                })
+                res.redirect("/homepage")
             }
         })
         res.redirect("/")
@@ -38,6 +35,12 @@ app.post("/login",(req,res)=>{
     }
    
 });
+app.get("/homepage",(req,res)=>{
+    res.render("index.ejs",{
+        post:posts,
+        msg:""
+    })
+})
 
 app.get("/register",(req,res)=>{
     res.render("register.ejs")
@@ -48,7 +51,6 @@ app.post("/confirmRegister",(req,res)=>{
     const user={"id":id,"pass":pass}
     const msg="User succesful registered"
     accounts.push(user)
-    console.log(accounts)
     res.render("login.ejs",{
         msg:msg
     })
@@ -73,10 +75,7 @@ app.post("/crearPost",(req,res)=>{
         } 
     })
     posts.push(post)
-            res.render("index.ejs",{
-                msg:"",
-                post:posts
-            })
+            res.redirect("/homepage")
 })
 
 app.get("/views/:blogID",(req,res)=>{

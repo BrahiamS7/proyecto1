@@ -1,19 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/main.css">
-    <title>Blog</title>
-</head>
-<body>
-    <form action="/crearPost" method="post">
-        <input type="text" name="postTitle" id="">
-        <textarea name="postContent" id="" cols="30" rows="10"></textarea>
-        <input type="submit" value="Enviar">
-    </form>
-    <% if (locals.msg) { %>
-        <%= msg %>
-    <% } %>
-</body>
-</html>
+<%- include("partials/header.ejs") %>
+    <div class="mainCrear">
+        <div class="boxForm">
+            <form action="/crearPost" method="post" class="formCrear">
+                <label for="postTitle">Title</label>
+                <input type="text" name="postTitle" id="" class="inputCrear">
+                <label for="postContent">Content</label>
+                <textarea name="postContent" id="" cols="30" rows="10" class="textareaCrear"></textarea>
+                <input type="submit" value="Send" class="btnLogin">
+            </form>
+            <% if (locals.msg) { %>
+                <%= msg %>
+            <% } %>
+        </div>
+    </div>
+<%- include("partials/footer.ejs") %>
